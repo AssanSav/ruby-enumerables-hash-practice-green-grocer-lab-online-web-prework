@@ -49,7 +49,7 @@ def checkout(cart, coupons)
   cart = apply_clearance(coupons_cart)
   total = 0 
   cart.each do |item|
-     total
+ 
     binding.pry
   end
 end
