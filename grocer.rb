@@ -48,8 +48,8 @@ def checkout(cart, coupons)
   cart = apply_coupons(merge_cart, coupons)
   cart = apply_clearance(coupons_cart)
   total = 0 
-  cart.each do |item|
- 
-    binding.pry
+  cart.each do |item, property|
+    total = property[:price] * property[:100]
+ binding.pry
   end
 end
