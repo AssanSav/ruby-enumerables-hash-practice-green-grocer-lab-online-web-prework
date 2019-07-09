@@ -50,6 +50,7 @@ def checkout(cart, coupons)
   total = 0 
   cart.each do |item, property|
     total = property[:price] * property[:count]
+    
  binding.pry
   end
 end
