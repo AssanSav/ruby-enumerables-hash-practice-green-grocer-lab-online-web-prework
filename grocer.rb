@@ -50,6 +50,7 @@ def checkout(cart, coupons)
   total = 0 
   cart.each do |item, property|
     total = property[:price] * property[:count]
-    total >= 100 ? total * 0.1 : nil 
   end
+    total >= 100 ? total * 0.1 : nil 
+  total
 end
