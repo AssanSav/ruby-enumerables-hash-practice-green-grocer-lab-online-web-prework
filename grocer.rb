@@ -35,7 +35,7 @@ end
 
 def apply_clearance(cart)
   
- cart.each do |item|
+ cart.each do |key, item|
    if item[:clearance] == true
      item[:price] = (item[:price] * 80)/100
  #binding.pry
