@@ -52,10 +52,7 @@ def checkout(cart, coupons)
   cart.each do |item, property|
     #binding.pry
     total += property[:price] * property[:count]
-    if total > 100 
-      total = total * 0.1 
-    else 
-      total
-    end
+    total > 100 ? total * 0.1 : total
   end
+  total
 end
