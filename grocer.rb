@@ -34,9 +34,9 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
- cart.each do |key|
-   if key[:clearance] == true
-     key[:price] = (key[:price] * 80)/100
+ cart.each do |item|
+   if item[:clearance] == true
+     item[:price] = (item[:price] * 80)/100
  #binding.pry
     end
   end
@@ -47,7 +47,7 @@ def checkout(cart, coupons)
   binding.pry
   cart = consolidate_cart(cart)
   cart = apply_coupons(cart, coupons)
-  cart = apply_clearance(cart)
+  cart = apply_clearance()
   total = 0 
   cart.each do |item, property|
     #binding.pry
