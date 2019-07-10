@@ -34,9 +34,9 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
- cart.each do |key, value|
-   if value[:clearance] == true
-     value[:price] = (value[:price] * 80)/100
+ cart.each do |key|
+   if key[:clearance] == true
+     key[:price] = (key[:price] * 80)/100
  #binding.pry
     end
   end
